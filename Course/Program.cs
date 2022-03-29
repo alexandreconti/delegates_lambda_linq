@@ -12,13 +12,23 @@ list.Add(new Product("Tablet", 450.00));
 
 //list.Sort(CompareProducts);
 
-//list.Sort(comp);
+//list.Sort(comp); //Comparison<T>
 
 //list.Sort((p1, p2) => p1.Name.ToUpper().CompareTo(p2.Name.ToUpper()));
 
-//list.RemoveAll(p => p.Price >= 100.00);
+//list.RemoveAll(p => p.Price >= 100.00); //delegate Predicate
 
-list.RemoveAll(ProductTest);
+//list.RemoveAll(ProductTest);
+
+//list.ForEach(UpdatePrice);
+
+//Action<Product> act = UpdatePrice;
+
+//Action<Product> act = p => { p.Price += p.Price * 0.1; };
+
+//list.ForEach(act);
+
+list.ForEach(p => { p.Price += p.Price * 0.1; });
 
 foreach (var p in list)
 {
@@ -31,7 +41,12 @@ foreach (var p in list)
 //}
 
 
-static bool ProductTest(Product p)
-{
-    return p.Price >= 100.00;
-}
+//static bool ProductTest(Product p)
+//{
+//    return p.Price >= 100.00;
+//}
+
+//static void UpdatePrice(Product p)
+//{
+//    p.Price += p.Price * 0.1;
+//}
