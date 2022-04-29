@@ -30,6 +30,8 @@ List<Product> products = new List<Product>() {
     new Product() {Id = 4, Name = "Level", Price = 70.0, Category = c1 }
 };
 
+//teste git hub
+
 var r1 = products.Where(p => p.Category.Tier == 1 && p.Price < 900.0);
 Print("TIER 1 AND PRICE < 900:", r1);
 
